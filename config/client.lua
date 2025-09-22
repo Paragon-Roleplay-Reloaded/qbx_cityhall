@@ -1,11 +1,11 @@
 return {
-    useTarget = false,
+    useTarget = true,
     debugPoly = false,
 
     peds = {
         { -- Cityhall Ped
-            model = 'a_m_m_hasjew_01',
-            coords = vec4(-262.79, -964.18, 30.22, 181.71),
+            model = 'a_f_y_business_01',
+            coords = vector4(-545.0, -204.4, 37.22, 214.92),
             scenario = 'WORLD_HUMAN_STAND_MOBILE',
             cityhall = true,
             zoneOptions = { -- Used for when UseTarget is false

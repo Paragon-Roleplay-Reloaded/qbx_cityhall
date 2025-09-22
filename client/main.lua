@@ -165,7 +165,7 @@ local function initBlips()
 
         if not cityhall.showBlip or not cityhall.blip then return end
 
-        blips[#blips + 1] = createBlip({blip = cityhall.blip, coords = cityhall.coords})
+        blips[#blips + 1] = createBlip({ blip = cityhall.blip, coords = cityhall.coords })
     end
 end
 
@@ -175,7 +175,8 @@ local function spawnPeds()
         local current = config.peds[i]
         current.model = type(current.model) == 'string' and joaat(current.model) or current.model
         lib.requestModel(current.model, 5000)
-        local ped = CreatePed(0, current.model, current.coords.x, current.coords.y, current.coords.z, current.coords.w, false, false)
+        local ped = CreatePed(0, current.model, current.coords.x, current.coords.y, current.coords.z, current.coords.w,
+            false, false)
         SetModelAsNoLongerNeeded(current.model)
         FreezeEntityPosition(ped, true)
         SetEntityInvincible(ped, true)
@@ -183,7 +184,7 @@ local function spawnPeds()
         TaskStartScenarioInPlace(ped, current.scenario, 0, true)
         current.pedHandle = ped
         if config.useTarget then
-            exports.ox_target:addLocalEntity(ped, {{
+            exports.ox_target:addLocalEntity(ped, { {
                 name = 'open_cityhall' .. i,
                 icon = 'fa-solid fa-city',
                 label = locale('info.target_open_cityhall'),
@@ -193,7 +194,7 @@ local function spawnPeds()
                     inRangeCityhall = true
                     openCityhallMenu()
                 end
-            }})
+            } })
         else
             local options = current.zoneOptions
             if options then

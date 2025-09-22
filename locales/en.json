@@ -8,9 +8,9 @@
         "new_job": "Congratulations on your new job!"
     },
     "info": {
-        "cityhall": "Cityhall",
-        "open_cityhall": "[E] Open Cityhall",
-        "target_open_cityhall": "Open Cityhall",
+        "cityhall": "City Hall",
+        "open_cityhall": "[E] Open City Hall",
+        "target_open_cityhall": "Open City Hall",
         "identity": "Identity",
         "employment": "Employment",
         "obtain_license_identity": "Obtain your licenses",
