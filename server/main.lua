@@ -44,9 +44,7 @@ end)
 
 lib.callback.register('qbx_cityhall:server:applyJob', function(source, job)
     if not sharedConfig.employment.enabled then
-        lib.print.error((
-            'Weird applyJob attempt while employment is disabled | source=%s | name=%s | requestedJob=%s'
-        ):format(source, GetPlayerName(source), tostring(job)))
+        lib.print.error(('Weird applyJob attempt while employment is disabled | source=%s | name=%s | requestedJob=%s'):format(source, GetPlayerName(source), tostring(job)))
         return false
     end
 
@@ -57,7 +55,7 @@ lib.callback.register('qbx_cityhall:server:applyJob', function(source, job)
         exports.qbx_core:Notify(source, locale('error.invalid_job'), 'error')
         return false
     end
-    
+
     player.Functions.SetJob(job, 0)
     exports.qbx_core:Notify(source, locale('success.new_job'), 'success')
 end)
